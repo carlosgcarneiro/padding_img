@@ -13,6 +13,16 @@ def pad_img(channel_array,w,h):
 	zeros = np.zeros(w*h).reshape( (w,h) )
 	zeros[:channel_array.shape[0], :channel_array.shape[1]] = channel_array
 	return zeros
+	'''
+	If you wanna, you can put a constant . To fill the image with withe, you will need to fill with 255.
+	
+	constant = np.full((w,h), 255, dtype=int)
+	constant[:channel_array.shape[0], :channel_array.shape[1]] = channel_array
+	return constant
+	
+	'''
+	
+	
 
 im = cv2.imread("icon.png")
 
